@@ -1,8 +1,12 @@
 /* Color Picker */
 
 main#color-picker-main {
-  padding: 100px 2rem 2rem;
+  padding: 50px 2rem 2rem;
   background: #ffece6;
+}
+
+main#color-picker-main .title {
+  color: black;
 }
 
 .color {

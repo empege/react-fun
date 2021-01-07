@@ -10,7 +10,7 @@ export const navData = [
   {
     id: 2,
     text: 'My Github',
-    url: '/'
+    url: 'https://github.com/empege/react-fun'
   }, 
   {
     id: 3,

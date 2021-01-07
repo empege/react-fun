@@ -24,7 +24,7 @@ function Navigation() {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-logo-ham-wrapper">
-          <a href="https:www.ivanmitov.com" className="nav-logo">
+          <a href="https://www.ivanmitov.com" className="nav-logo">
             <img src={logo} alt="logo"/>
             <h1>
               <span className="ivan">Ivan</span>
