@@ -1,0 +1,129 @@
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+main#cart-main {
+  padding: 100px 2rem 2rem;
+  background: #ffece6;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.cart-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-nav h1 {
+  font-weight: normal;
+}
+.items-counter-wrapper {
+  display: flex;
+}
+.items-counter-wrapper svg {
+  fill: #2680c0;
+}
+.items-counter {
+  font-size: 1.5rem;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #2680c0;
+}
+.items-container {
+  border-bottom: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  display: grid;
+  gap: 2rem;
+}
+
+/* CART CONTAINER */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-size: 1.2rem;
+}
+
+.remove-items {
+  align-self: center;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  color: tomato;
+  border: 1px solid tomato;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  background: whitesmoke;
+}
+.remove-items:hover {
+  color: white;
+  background: tomato;
+}
+
+
+/* CART ITEM */
+
+.cart-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.cart-item img {
+  margin-right: 2rem;
+  width: 80px;
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.item-title {
+  color: #102a42;
+}
+.item-price {
+  color: #617d98;
+}
+.remove-item {
+  align-self: start;
+  border: none;
+  background: none;
+  color: tomato;
+  cursor: pointer;
+}
+
+.item-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.item-count svg {
+  fill: #2680c0;
+  cursor: pointer;
+}
+.item-count svg:hover {
+  fill: black;
+}
+.count {
+  font-size: 1.3rem;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 150px;
+}

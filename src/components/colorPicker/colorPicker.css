@@ -1,0 +1,116 @@
+/* Color Picker */
+
+main#color-picker-main {
+  padding: 100px 2rem 2rem;
+  background: #ffece6;
+}
+
+.color {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: none;
+}
+.color-light {
+  color: #cccccc;
+}
+
+.colorPicker-main-grid {
+  display: grid;
+  grid-template-columns: 7fr minmax(auto, 250px);
+  grid-template-rows: 1fr;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.colorPicker-main-grid > * {
+  border-radius: 5px;
+}
+
+.colorPicker-main-grid input {
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid white;
+}
+
+.color-main-left {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+.color-form {
+  display: grid;
+  justify-items: center;
+  color: white;
+  border-radius: 5px;
+}
+.color-form > * {
+  margin: 1.2rem;
+  font-size: 1.2rem;
+}
+.color-form input {
+  font-size: 1.5rem;
+  border: 1px solid black;
+  max-width: 250px;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(auto, 250px));
+}
+
+
+.color-main-right {
+  background: whitesmoke;
+  grid-template-columns: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+.color-main-right > h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.color-main-right article:first-child{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.color-main-right article:last-child{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 1800px) {
+  .colors {
+    min-height: calc(100vh - 100px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(auto, 1fr));
+  }
+}
+
+.saved-color {
+  justify-content: space-between;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.saved-color .flex-row {
+  align-items: center;
+}
+
+.remove-color-btn {
+  padding: 0;
+  font-size: 1.5rem;
+  margin-left: 1.2rem;
+  align-self: start;
+  justify-self: end;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.copied-one {
+  border: 2px solid white;
+  outline: 2px solid black;
+}
