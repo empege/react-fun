@@ -23,25 +23,32 @@ export const navData = [
 export const components = [
   {
     id: 1,
+    title: 'Coctails 🍸',
+    description: 'Yes, I\'ve spelled it wrong x( A bit more useContext, fetching Cocktails DB and just basic React practice in general. Cheers! 🍸🍸🍸',
+    image: 'https://img.delicious.com.au/CKMUcpx-/w1200/del/2015/11/summer-cocktails-24374-3.jpg',
+    url: '/coctails',
+  },
+  {
+    id: 2,
     title: 'Cart 👜',
     description: 'Learning how to play with useReducer and useContext with this simple cart.',
     image: 'https://ivanmitov.com/react/images/cart.png',
     url: '/cart',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Color Picker 🎨',
     description: 'Color picker that can divide a color by 100 fractions of tint and shade!',
     image: 'https://ivanmitov.com/react/images/colorPicker.png',
     url: '/colorPicker',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Peja\'s task!',
     description: 'A friend of mine sent me this task to show him my (JS) worth... I don\'t know Typescript yet so, will show it when I learn it! 😅',
     image: 'https://ivanmitov.com/react/images/soon.jpg',
     url: '/peja',
-  }, 
+  },
 ]
 
 export const cart =  [

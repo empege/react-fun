@@ -24,8 +24,12 @@ html, body {
 }
 
 body {
-  padding-top: var(--navbarHeightMobile);
+  /* padding-top: var(--navbarHeightMobile); */
   background:url('reactfunground.jpg');
+}
+
+#root {
+  min-height: 100vh;
 }
 
 a {text-decoration: none; color: black;}
@@ -70,7 +74,7 @@ ul {list-style-type: none;}
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(150px, 500px));
   justify-content: space-around;
-  gap: 2rem;
+  gap: 5rem 2rem;
 }
 .component {
   border: 3px solid black;

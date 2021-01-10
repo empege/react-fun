@@ -1,0 +1,249 @@
+.coctails-wrapper {
+  min-height: calc(100vh - var(--navbarHeight));
+  height: 100%;
+  background: var(--purple);
+}
+
+/* Navbar */
+.coctails-nav {
+  width: 100%;
+  height: 3rem;
+  background: var(--yellow);
+  border-bottom: 1px solid white;;
+  padding: 2rem;
+  box-shadow: -2px 5px 3px var(--dark);
+}
+.coctails-nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100%;
+}
+.coctails-nav-center ul {
+  display: flex;
+}
+.coctails-nav-center ul li {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 30px;
+}
+
+/* About && Error */
+.coctails-about {
+  max-width: 1000px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  color: beige;
+}
+.coctails-about h1 {
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+.coctails-about h2 {
+  margin-bottom: 30px;
+}
+.coctails-about p {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Error */
+.coctails-btn {
+  background: var(--yellow);
+  border: 1px solid var(--purple);
+}
+.coctails-btn-link {
+  color: var(--purple);
+  font-size: 1.2rem;
+}
+
+
+/* Home */
+.coctails-home {
+  max-width: 1170px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  color: beige;
+  display: grid;
+  gap: 5rem;
+}
+
+/* ResultList */
+.coctails-result-wrapper h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 3px;
+}
+
+.coctails-result {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem 2rem;
+}
+
+.coctail {
+  background: white;
+  text-align: left;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 8px 8px 3px var(--dark);
+
+}
+.coctail img {
+  width: 100%;
+}
+
+.coctail-info {
+  padding: 1rem;
+  color: var(--dark)
+}
+.coctail-info > *{
+  margin: 5px 0;
+}
+.coctail-info h3 {
+  font-size: 1.8rem;
+}
+.coctail-info p {
+  color: gray;
+}
+.coctail-info .btn {
+  background: var(--purple);
+  color: white;
+  border: 1px solid var(--purple);
+  padding: 10px 0;
+}
+.coctail-info .btn > *{
+  color: white;
+  padding: 10px;
+}
+
+/* LOADER - taken from tutorial css */
+.loader,
+.loader:before,
+.loader:after {
+  background: transparent;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: var(--yellow);
+  text-indent: -9999em;
+  margin: 88px auto;
+  margin-top: 20rem;
+  position: relative;
+  font-size: 3rem;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+/* SearchForm */
+.search-form {
+  display: grid;
+  gap: 1rem;
+  background: var(--yellow);
+  padding: 2rem 5rem 2.5rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 8px 8px 3px var(--dark);
+}
+.search-form h3{
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+.c-form input {
+  font-size: 1.5rem;
+  border: 3px solid var(--purple);
+  border-radius: 5px;
+}
+
+
+/* Coctail Page */
+.coctail-page {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  color: var(--white);
+}
+.coctail-page h1 {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  text-align: center;
+}
+.coctail-page-info-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.coctail-page-info-wrapper img{
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid white;
+  box-shadow: 8px 8px 8px var(--dark);
+}
+.coctail-page-info {
+  padding: 0 2rem;
+  letter-spacing: 2px;
+  line-height: 2;
+  border-radius: 5px;
+}
+.coctail-atr {
+  background: var(--yellow);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--dark);
+}
