@@ -6,7 +6,7 @@ import CoctailsHome from './Home'
 import CoctailPage from './CoctailPage'
 import About from './About'
 import Error from './Error'
-import './coctails.css';
+import '../../App.css'
 
 function App() {
   return (
@@ -14,28 +14,28 @@ function App() {
       {/* Body css kako menjati u odnosu na stranicu? */}
       <div className="coctails-wrapper">
 
-      <Navbar />
+        <Navbar />
 
-      <Switch>
+        <Switch>
 
-        <Route exact path='/coctails'>
-          <CoctailsHome />
-        </Route>
+          <Route exact path='/coctails'>
+            <CoctailsHome />
+          </Route>
 
-        <Route path='/coctails/about'>
-          <About />
-        </Route>
-        
-        <Route path='/coctails/coctail/:id'>
-          <CoctailPage />
-        </Route>
+          <Route path='/coctails/about'>
+            <About />
+          </Route>
 
-        <Route path='/coctails/*'>
-          <Error />
-        </Route>
+          <Route path='/coctails/coctail/:id'>
+            <CoctailPage />
+          </Route>
 
-      </Switch>
-        
+          <Route path='/coctails/*'>
+            <Error />
+          </Route>
+
+        </Switch>
+
       </div>
     </Router>
   )

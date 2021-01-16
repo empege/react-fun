@@ -13,8 +13,8 @@ function CoctailPage() {
     const resp = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
     const data = await resp.json();
 
-    if(data){
-      
+    if (data) {
+
       const {
         strDrink: name,
         strCategory: category,
@@ -47,7 +47,7 @@ function CoctailPage() {
     fetchCoctail();
   }, [])
 
-  if(!coctail){
+  if (!coctail) {
     return <Loading />
   }
 
@@ -57,7 +57,7 @@ function CoctailPage() {
     <section className="coctail-page">
       <h1>{name}</h1>
       <div className="coctail-page-info-wrapper">
-        <img src={image} alt={name}/>
+        <img src={image} alt={name} />
         <div className="coctail-page-info">
           <h2><span className="coctail-atr">Name:</span> {name}</h2>
           <h2><span className="coctail-atr">Category:</span> {category}</h2>

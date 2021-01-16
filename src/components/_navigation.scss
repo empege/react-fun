@@ -1,6 +1,6 @@
 /* Navbar */
 .navbar {
-  background: var(--dark);
+  background: $dark;
   /* position: fixed; */
   left: 0;
   right: 0;
@@ -30,26 +30,26 @@
 .nav-logo h1 {
   font-size: 21px;
   margin-left: 10px;
-  color: var(--white);
+  color: $white;
 }
 .nav-logo span {
   padding: 0 5px;
-  border: 2px solid var(--white);
+  border: 2px solid $white;
 }
 .ivan {
-  background: var(--purple);
-  color: var(--white);
+  background: $purple;
+  color: $white;
   border-top-left-radius: 5px;
   border-right: none !important;
 }
 .mitov {
-  background: var(--yellow);
-  color: var(--purple);
+  background: $yellow;
+  color: $purple;
   border-bottom-right-radius: 5px;
 }
 .react {
-  background: var(--purple);
-  color: var(--yellow);
+  background: $purple;
+  color: $yellow;
   border-top-left-radius: 5px;
 }
 
@@ -61,7 +61,7 @@
   font-size: 1.1rem;
 }
 .nav-links a {
-  color: var(--white);
+  color: $white;
 }
 .nav-logo-ham-wrapper {
   display: flex;
@@ -70,7 +70,7 @@
   display: none;
 }
 .nav-ham div {
-  background: var(--white);
+  background: $white;
   width: 35px;
   height: 5px;
   margin: 6px 0;
@@ -109,7 +109,7 @@
   .nav-ham {
     cursor: pointer;
     display: block;
-    color: var(--white);
+    color: $white;
     position: relative;
   }
 }

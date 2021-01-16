@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import Values from 'values.js'
 import SingleColor from './SingleColor'
-import './colorPicker.css'
+import '../../App.css'
 
 function App() {
-  
+
   const [color, setColor] = useState('crimson')
   const [tint, setTint] = useState(10)
   const [list, setList] = useState(new Values('crimson').all(10))
 
-  const savedColors = JSON.parse(localStorage.getItem('myColors')) ? JSON.parse(localStorage.getItem('myColors')) : [{name: 'red', color: '#ff0000'},{name: 'blue', color: '#0000ff'},{name: 'white', color: '#fff'}];
+  const savedColors = JSON.parse(localStorage.getItem('myColors')) ? JSON.parse(localStorage.getItem('myColors')) : [{ name: 'red', color: '#ff0000' }, { name: 'blue', color: '#0000ff' }, { name: 'white', color: '#fff' }];
   localStorage.setItem('myColors', JSON.stringify(savedColors));
 
   const [savedList, setSavedList] = useState(savedColors);
@@ -24,7 +24,7 @@ function App() {
       alert(`Sorry but this wasn't a proper hex code.\nUse '#' at the start and check if the code is corrent.`);
     }
   }
-  
+
   const copyColor = (e, color) => {
     const savedColors = Array.from(document.querySelectorAll('.saved-color'));
     savedColors.forEach(current => {
@@ -33,17 +33,17 @@ function App() {
     e.currentTarget.classList.add('copied-one');
     navigator.clipboard.writeText(color)
   }
-  
+
   const removeColor = (e) => {
     e.stopPropagation();
     const deleteColorName = e.target.parentNode.getAttribute('color-name');
     setSavedList(() => savedList.filter(current => current.name !== deleteColorName));
   }
-  
+
   const addColor = (e, name, hex) => {
     e.preventDefault();
     console.log(e, name, hex)
-    setSavedList([...savedList, {name, color: hex}])
+    setSavedList([...savedList, { name, color: hex }])
   }
 
   useEffect(() => {
@@ -65,17 +65,17 @@ function App() {
 
         <section className="color-main-left">
           {/* forma */}
-          <form className="color-form" style={{background:color}} onSubmit={handleSubmit}>
-            
+          <form className="color-form" style={{ background: color }} onSubmit={handleSubmit}>
+
             {/* boja */}
             <div className="flex-column">
               <label htmlFor="color-input">Input hex or a properly named color: </label>
-              <input type="text" id="color-input" value={color} onChange={(e)=>setColor(e.target.value)}/>
+              <input type="text" id="color-input" value={color} onChange={(e) => setColor(e.target.value)} />
             </div>
             {/* tint i shade */}
             <div className="flex-column">
               <label htmlFor="tint-input">{`Input tint & shade % (input number from 1 to 100 and see what you get)`}</label>
-              <input type="number" id="tint-input" min="1" max="100" value={tint} onChange={(e)=>setTint(Number(e.target.value))}/>
+              <input type="number" id="tint-input" min="1" max="100" value={tint} onChange={(e) => setTint(Number(e.target.value))} />
             </div>
 
             <button className="btn" type="submit">Get your color!</button>
@@ -104,15 +104,15 @@ function App() {
           <h2>Saved colors:</h2>
           <section>
             {savedList.map((current, index) => {
-              const {name, color} = current;
+              const { name, color } = current;
               return (
                 <article
                   key={index}
                   className="saved-color flex-row"
-                  style={{background: `${color}`}}
+                  style={{ background: `${color}` }}
                   color-name={name}
-                  onClick={(e) => {copyColor(e, color)}}
-                  >
+                  onClick={(e) => { copyColor(e, color) }}
+                >
                   <div className="">
                     <div className="flex-row">
                       <h4>Name:&nbsp;</h4>

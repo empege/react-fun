@@ -12,11 +12,11 @@ import Error from './components/Error'
 import './App.css';
 
 function App() {
-  
+
   return (
     <Router>
       <Navigation />
-      
+
 
       <Switch>
 
@@ -27,7 +27,7 @@ function App() {
         <Route path='/colorPicker'>
           <ColorPicker />
         </Route>
-        
+
         <Route path='/coctails'>
           <CoctailProvider>
             <Coctails />
@@ -47,7 +47,7 @@ function App() {
 
       </Switch>
 
-      
+
 
     </Router>
   );
