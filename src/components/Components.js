@@ -7,15 +7,16 @@ const Components = () => {
   return (
     <div className="components">
       {components.map(component => {
-        const {id, title, description, image, url} = component;
+        const { id, title, github, description, image, url } = component;
         return (
-          <Link key={id} to={url} className="component">
-            <img src={image} alt={title}/>
+          <a key={id} href={url} className="component">
+            <img src={image} alt={title} />
             <div className="component-info">
               <h2><i>Title:</i> {title}</h2>
-              <p><i>Description:</i> {description}</p>
+              <p><i>Description:</i> {description}</p><br></br>
+              {github && <h4>{`Github: `}{github}</h4>}
             </div>
-          </Link>
+          </a>
         )
       })}
     </div>

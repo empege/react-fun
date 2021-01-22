@@ -6,12 +6,12 @@ export const navData = [
     id: 1,
     text: 'Home',
     url: '/'
-  }, 
+  },
   {
     id: 2,
     text: 'My Github',
     url: 'https://github.com/empege/react-fun'
-  }, 
+  },
   {
     id: 3,
     text: 'IvanMitov.com',
@@ -24,9 +24,17 @@ export const components = [
   {
     id: 1,
     title: 'Coctails 🍸',
-    description: 'Yes, I\'ve spelled it wrong x( A bit more useContext, fetching Cocktails DB and just basic React practice in general. Cheers! 🍸🍸🍸',
+    description: 'Yes, I spelled it wrong x( A bit more useContext, fetching Cocktails DB and just basic React practice in general. Cheers! 🍸🍸🍸',
     image: 'https://img.delicious.com.au/CKMUcpx-/w1200/del/2015/11/summer-cocktails-24374-3.jpg',
     url: '/coctails',
+  },
+  {
+    id: 4,
+    title: 'Peja\'s task!',
+    github: 'https://github.com/empege/pejastask',
+    description: 'A friend of mine sent me this task to show him my (JS) worth... I don\'t know Typescript yet so, will show it when I learn it! 😅 But for now, it works kind of okay without it!',
+    image: 'https://ivanmitov.com/react/images/pejastask.png',
+    url: 'https://pejastaks.netlify.app/',
   },
   {
     id: 2,
@@ -42,16 +50,9 @@ export const components = [
     image: 'https://ivanmitov.com/react/images/colorPicker.png',
     url: '/colorPicker',
   },
-  {
-    id: 4,
-    title: 'Peja\'s task!',
-    description: 'A friend of mine sent me this task to show him my (JS) worth... I don\'t know Typescript yet so, will show it when I learn it! 😅',
-    image: 'https://ivanmitov.com/react/images/soon.jpg',
-    url: '/peja',
-  },
 ]
 
-export const cart =  [
+export const cart = [
   {
     id: 1,
     title: 'Samsung Galaxy S7',
