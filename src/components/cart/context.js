@@ -3,7 +3,7 @@ import cartItems from './data'
 import reducer from './reducer'
 
 
-const url = 'https://course-api.com/react-useReducer-cart-project'
+const url = 'https://ivanmitov.com/api/smilga-data.json'
 const CartContext = React.createContext()
 
 const initialState = {
@@ -13,16 +13,16 @@ const initialState = {
   totalPrice: 0
 }
 
-const CartProvider = ({children}) => {
+const CartProvider = ({ children }) => {
 
-  
+
   const [state, dispatch] = useReducer(reducer, initialState)
-  
+
   const fetchData = async () => {
     const resp = await fetch(url);
     const items = await resp.json();
-    dispatch({type: 'FETCH_ITEMS', payload: items})
-    dispatch({type: 'LOADING'})
+    dispatch({ type: 'FETCH_ITEMS', payload: items })
+    dispatch({ type: 'LOADING' })
   }
 
   useEffect(() => {
@@ -31,33 +31,33 @@ const CartProvider = ({children}) => {
 
 
   const removeAll = () => {
-    dispatch({type: 'REMOVE_ALL'})
+    dispatch({ type: 'REMOVE_ALL' })
   }
 
   const removeItem = (id) => {
-    dispatch({type: 'REMOVE_ITEM', payload: id})
+    dispatch({ type: 'REMOVE_ITEM', payload: id })
   }
 
   const increment = (id) => {
-    dispatch({type: 'INCREMENT', payload: id})
+    dispatch({ type: 'INCREMENT', payload: id })
   }
 
   const decrement = (id) => {
-    dispatch({type: 'DECREMENT', payload: id})
+    dispatch({ type: 'DECREMENT', payload: id })
   }
 
   useEffect(() => {
-    dispatch({type: 'TOTAL_AMOUNT_AND_PRICE'});
+    dispatch({ type: 'TOTAL_AMOUNT_AND_PRICE' });
   }, [state.items])
 
   return (
     <CartContext.Provider value={{
-        ...state,
-        removeAll,
-        increment,
-        decrement,
-        removeItem,
-      }}>
+      ...state,
+      removeAll,
+      increment,
+      decrement,
+      removeItem,
+    }}>
       {children}
     </CartContext.Provider>
   )

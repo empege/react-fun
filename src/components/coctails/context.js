@@ -4,10 +4,10 @@ const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='
 
 const CoctailContext = React.createContext();
 
-const CoctailProvider = ({children}) => {
+const CoctailProvider = ({ children }) => {
 
   const [coctails, setCoctails] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('Ace');
   const [loading, setLoading] = useState(true);
 
   const fetchCoctails = async () => {
@@ -16,16 +16,17 @@ const CoctailProvider = ({children}) => {
     const data = await resp.json();
     // console.log(data);
     const drinks = data.drinks;
-    if(drinks){
+    console.log(typeof drinks)
+    if (drinks && typeof drinks === 'object' && drinks.length > 0) {
       // console.log(drinks);
       const searchedCoctails = drinks.map(current => {
-        const { idDrink: id, strDrink: name, strDrinkThumb: image, strAlcoholic: info, strGlass: glass} = current;
-        return {id, name, image, info, glass}
+        const { idDrink: id, strDrink: name, strDrinkThumb: image, strAlcoholic: info, strGlass: glass } = current;
+        return { id, name, image, info, glass }
       });
       // console.log(searchedCoctails);
       setCoctails(searchedCoctails);
       setLoading(false)
-    }else{
+    } else {
       setCoctails([]);
       setLoading(false)
     }
@@ -36,9 +37,9 @@ const CoctailProvider = ({children}) => {
   }, [searchTerm])
 
 
-  
+
   return (
-    <CoctailContext.Provider value={{loading, coctails, setLoading, setSearchTerm}}>
+    <CoctailContext.Provider value={{ loading, coctails, setLoading, setSearchTerm }}>
       {children}
     </CoctailContext.Provider>
   )
